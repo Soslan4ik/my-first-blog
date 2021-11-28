@@ -1,0 +1,163 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <title>SWEET STORE</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="../img/fv.png" type="image/x-icon">
+    <link rel="stylesheet" href="../../../static/css/style.css">
+    <link rel="stylesheet" href="../../../static/css/iconsfont.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <img class="logo" src="../../../static/img/logo.svg" width="78" height="80" >
+        
+        <nav> 
+            <ul>
+                <li>
+                    <a href="#service" class="nav_text"> О нас </a>
+                    <a href="#way" class="nav_text"> Как сделать заказ? </a>
+                    <a href="#goods" class="nav_text"> Ассортимент </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main>  
+        <article id="cakeroom" class="block_1">
+            <aside class="text">
+                <h1> SWEET STORE </h1> <br>
+                <p> Вкусные торты, сочные капкейки, изысканные макаронсы. </p> <br>
+                <p> Всё это вы можете попробовать в нашей кондитерской.</p> <br>
+                <p> Добро пожаловать в наш сладкий мир! </p> <br>
+            </aside> 
+            <aside class="img_1">
+                <img src="../../../static/img/bg.png">
+            </aside>
+        </article>
+        <div id="service"></div>
+        <article  class="">
+            <h2> О НАС </h2>
+            <section class="rounds">
+                <aside class="round_1">
+                    <p class="img_round"> <img src="../../../static/img/recipe.svg" width="80"> </p>
+                    <p class="round_t"> Легендарные рецепты </p>
+                    <p class="round_st"> Наши торты и выпечка готовятся по рецептурам, в создании которых участвовали лучшие кондитеры со всего мира </p>
+                </aside>
+                <aside class="round_2">
+                    <p class="img_round"> <img src="../../../static/img/review.svg" width="80"> </p>
+                    <p class="round_t"> Доверие клиентов </p>
+                    <p class="round_st"> Около 90% наших клиентов приходят по рекомендациям знакомых, которым нравится наша продукция </p>
+                </aside>
+                <aside class="round_1">
+                    <p class="img_round"> <img src="../../../static/img/price.svg" width="80"> </p>
+                    <p class="round_t"> Цена = качество </p>
+                    <p class="round_st"> Наши торты, пирожные и другие изделия сделаны только из отборных и натуральных ингредиентов </p>
+                </aside>
+            </section>
+        </article>
+        <div id="way"></div>
+            <h2>КАК СДЕЛАТЬ ЗАКАЗ?</h2> 
+                <aside style="padding-top: 80px;">
+                    <p class="img_way"> <img src="../../../static/img/way.svg"> </p>
+                    <p class="way_text_right" style="font-weight: 500;"> Выберите удобный способ для заказа: </p> 
+                    <p class="way_text_left"> Оставьте заявку на звонок: </p>
+                        {% block content %}
+                        <form action="{% url 'index' %}" method="POST">
+                            {% csrf_token %}
+                            <input class="name_vvod" name="search" placeholder="Имя" type="text" autocomplete="off"/> 
+                            <input class="tel_zaiavka_vvod" name="search" placeholder="Телефон" type="text" autocomplete="off"/> 
+                            <input type="submit" class="otpravit_zaiavka"  value="отправить" onclick="alertFunction()"/>
+                        </form>  
+                         
+                        {% endblock %}
+                    <p class="way_text_right"> Мессенджеры и соцсети: </p>
+                        <div class="soc_way">
+                            <a class="soc_inst _icon-inst"  target="_blank" href="http://instagram.com"> </a>
+                            <a class="soc_inst _icon-fb"  target="_blank" href="http://facebook.com"> </a>
+                            <a class="soc_vk _icon-vk"  target="_blank"href="http://vk.com"> </a>   
+                        </div>
+                     
+                    <p class="way_text_left"> Мы оперативно ответим и обусдим все детали заказа <span style="color: #7A35BF; font-weight: 600;"> UwU </span></p>
+                </aside>
+        <article id="goods">
+            <h2 style="margin-bottom: 8px"> АССОРТИМЕНТ </h2>
+            <h3> Торты от 2 кг </h3>
+
+            
+            <section class="products">
+                {% for el in products %}
+                <aside class="block_product_l">
+                    <img class="img_product" src="{{el.photo}}" >
+                    <p class="title_product"> {{el.title}}  </p>
+                    <p class="price_product"> {{el.price}} <span style="font-weight:400; font-size: 18px;"> руб/кг </p>
+                </aside>
+                {% endfor %}
+            <!-- <aside class="block_product_l">
+                    <img class="img_product" src="../../../static/img/товары/фисташка-кофе.png" >
+                    <p class="title_product"> {Фисташка - кофе}</p>
+                    <p class="price_product"> 1800 <span style="font-weight:400; font-size: 18px;"> руб/кг </p>
+            </aside>
+            <aside class="block_product_l">
+                    <img class="img_product" src="../../../static/img/товары/вишня-шоколад.png">
+                    <p class="title_product"> Вишня - шоколад </p>
+                    <p class="price_product"> 1600 <span style="font-weight:400; font-size: 18px;"> руб/кг </p>
+            </aside>
+            <aside class="block_product_l">
+                    <img class="img_product" src="../../../static/img/товары/фундук-банан-карамель.png">
+                    <p class="title_product"> Фундук - банан - карамель</p>
+                    <p class="price_product"> 1800 <span style="font-weight:400; font-size: 18px;"> руб/кг </p>
+            </aside> -->
+
+            </section>
+            
+            <h3> Капкейки </h3>
+            <section class="products">
+            <aside class="block_product_l">
+                    <img class="img_product" src="../../../static/img/товары/малина - белый шоколад.jpg" >
+                    <p class="title_product"> Малина - белый шоколад</p>
+                    <p class="price_product"> 1800 <span style="font-weight:400; font-size: 18px;"> руб/кг </p>
+            </aside>
+            <aside class="block_product_l">
+                    <img class="img_product" src="../../../static/img/товары/вишня-шоколад.png">
+                    <p class="title_product"> Вишня - шоколад </p>
+                    <p class="price_product"> 1600 <span style="font-weight:400; font-size: 18px;"> руб/кг </p>
+            </aside>
+            <aside class="block_product_l">
+                    <img class="img_product" src="../../../static/img/товары/фундук-банан-карамель.png">
+                    <p class="title_product"> Фундук - банан - карамель</p>
+                    <p class="price_product"> 1800 <span style="font-weight:400; font-size: 18px;"> руб/кг </p>
+            </aside>
+            </section>
+        </article> 
+    </main>
+    <section class="footer_img"> </section>
+    <footer>
+        <section class="footer_cont_1"> 
+            <p class="footer_t"> Контакты </p> 
+            <a href="" class="footer_st"> cakeroom@gmail.com </a>
+            <a href="" class="footer_st"> +7 999 999 99 99 </a>
+        </section>
+        <section class="footer_cont_2"> 
+            <p class="footer_t"> Мы в социальных сетях </p>
+            <section class="soc">
+            <a class="soc_inst _icon-inst"  target="_blank" href="http://instagram.com"> </a>
+            <a class="soc_vk _icon-vk"  target="_blank"href="http://vk.com"> </a>
+            <a class="soc_youtube _icon-youtube"  target="_blank" href="http://youtube.com"> </a>
+            <a class="soc_inst _icon-fb"  target="_blank" href="http://facebook.com"> </a>
+            </section>
+        </section>
+    </footer>
+    <script>
+    function alertFunction() {
+    alert("Ваша заявка принята! В ближайшее время наш оператор свяжется с Вами.");}
+    </script>
+    <!-- <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> -->
+    <!-- <script src="../js/script.js"></script> -->
+</body>
+
+</html>

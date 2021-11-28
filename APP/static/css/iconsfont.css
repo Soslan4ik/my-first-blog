@@ -1,0 +1,39 @@
+@font-face {
+  font-family: 'soc_icons';
+  src:  url('../fonts/soc_icons.eot?p8gs3v');
+  src:  url('../fonts/soc_icons.eot?p8gs3v#iefix') format('embedded-opentype'),
+    url('../fonts/soc_icons.ttf?p8gs3v') format('truetype'),
+    url('../fonts/soc_icons.woff?p8gs3v') format('woff'),
+    url('../fonts/soc_icons.svg?p8gs3v#soc_icons') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="_icon-"]::before, [class*=" _icon-"]::before {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'soc_icons' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+._icon-fb:before {
+  content: "\e900";
+}
+._icon-inst:before {
+  content: "\e901";
+}
+._icon-vk:before {
+  content: "\e902";
+}
+._icon-youtube:before {
+  content: "\e903";
+}

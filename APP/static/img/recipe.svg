@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 25.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 346 346" style="enable-background:new 0 0 346 346;" xml:space="preserve">
+<style type="text/css">
+	.st0{clip-path:url(#SVGID_2_);}
+	.st1{fill:none;stroke:#A866ED;stroke-width:12.04;stroke-linecap:round;stroke-linejoin:round;}
+	.st2{fill:none;stroke:#A866ED;stroke-width:15.96;stroke-linecap:round;stroke-linejoin:round;}
+	.st3{fill:none;stroke:#121331;stroke-width:12.04;stroke-linecap:round;stroke-linejoin:round;}
+	.st4{filter:url(#Adobe_OpacityMaskFilter);}
+	.st5{fill:#FF0000;}
+	.st6{mask:url(#c_1_);}
+</style>
+<g>
+	<defs>
+		<rect id="SVGID_1_" x="38" y="24" width="500" height="500"/>
+	</defs>
+	<clipPath id="SVGID_2_">
+		<use xlink:href="#SVGID_1_"  style="overflow:visible;"/>
+	</clipPath>
+	<g class="st0">
+		<g>
+			<path class="st1" d="M91.6,76.2h47"/>
+			<path class="st2" d="M195.9,76.2L195.9,76.2 M225.1,76.2L225.1,76.2 M254.4,76.2L254.4,76.2"/>
+			<path class="st3" d="M52.9,278.7h240.2V38.6H52.9V278.7z M66.3,278.7h213.5v26.7H66.3V278.7z"/>
+		</g>
+		<defs>
+			<filter id="Adobe_OpacityMaskFilter" filterUnits="userSpaceOnUse" x="85.6" y="103.7" width="174.9" height="151.3">
+				<feColorMatrix  type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 1 0"/>
+			</filter>
+		</defs>
+		<mask maskUnits="userSpaceOnUse" x="85.6" y="103.7" width="174.9" height="151.3" id="c_1_">
+			<g class="st4">
+				<path class="st5" d="M254.5,218.7H91.8l-0.1-109h162.7L254.5,218.7z"/>
+			</g>
+		</mask>
+		<g class="st6">
+			<path class="st1" d="M92.6,182.5H253"/>
+			<path class="st3" d="M91.8,218.2l-0.1-108.5h162.7l0.1,108.5 M91.8,218.2L91.6,249h162.7l0.1-30.8"/>
+		</g>
+		<g>
+			<path class="st3" d="M254.5,218.7H91.8l-0.1-109h162.7L254.5,218.7z M132.3,138.1h81.3"/>
+		</g>
+	</g>
+</g>
+</svg>
